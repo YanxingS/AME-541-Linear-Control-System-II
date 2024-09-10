@@ -86,6 +86,13 @@ xlabel('y(t)');
 ylabel('y_dot(t)');
 axis equal
 toc
+%% for fun, wanna see system response for IC4
+figure(5)
+hold on
+plot(Tspan',Y(:,2),"LineWidth",2);
+plot(Tspan',Y1(:,2),"LineWidth",2);
+plot(Tspan',Y2(:,2),"LineWidth",2);
+legend('hard_model','sof_spring','linear_model')
 %% function definition
 function y = hard_model(t,x)
 
